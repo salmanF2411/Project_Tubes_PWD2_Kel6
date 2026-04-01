@@ -15,16 +15,22 @@
                 <span class="text-xs text-slate-500 font-bold">Selamat datang 👋</span>
             </div>
 
-            <div class="relative">
+            <!-- drop down profile -->
+            <div class="relative" x-data="{ open: false }">
                 <button
-                    class="w-10 h-10 rounded-full flex items-center justify-center 
-                           hover:shadow-lg transition cursor-pointer border-2 border-white/40 overflow-hidden">
+                    @click="open = !open"
+                    class=" w-10 h-10 rounded-full flex items-center justify-center
+                    hover:shadow-lg transition cursor-pointer border-2 border-white/40 overflow-hidden">
                     <!-- fotosaya hanya sebagai contoh, nanti menyesuaikan -->
                     <img src="{{ asset('img/fotosaya.jpg') }}" alt="Profile" class="w-full h-full object-cover">
                 </button>
 
                 <!-- Menu Dropdown -->
                 <div
+                    x-show="open"
+                    x-cloak
+                    x-transition
+                    @click.outside="open = false"
                     class="absolute right-0 mt-3 w-45 bg-white text-slate-800 rounded-xl shadow-2xl py-2 z-50 border border-blue-200">
 
                     <div class="px-4 py-3 border-b border-slate-100 bg-slate-50">
