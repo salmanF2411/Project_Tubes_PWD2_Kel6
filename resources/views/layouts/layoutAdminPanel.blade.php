@@ -22,7 +22,13 @@
 
     <x-header />
 
-    @yield('content')
+    <div class="flex">
+        <x-sidebar />
+
+        <main class="flex-1 p-8">
+            @yield('content')
+        </main>
+    </div>
     
 </body>
 
