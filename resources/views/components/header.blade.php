@@ -10,6 +10,15 @@
         </div>
 
         <div class="flex items-center gap-6">
+            <!-- Search Bar -->
+            <div class="hidden lg:flex items-center bg-slate-50 rounded-lg px-4 py-2 border border-slate-200 hover:border-blue-400 transition-colors max-w-xs">
+                <input
+                    type="text"
+                    placeholder="Cari produk, kategori..."
+                    class="bg-transparent outline-none text-sm text-slate-700 placeholder-slate-400 w-full focus:ring-0">
+                <i class="fa-solid fa-search text-slate-400 ml-2"></i>
+            </div>
+
             <div class="hidden md:flex flex-col items-end">
                 <span class="text-sm font-medium">Pak Jayusman</span>
                 <span class="text-xs text-slate-500 font-bold">Selamat datang 👋</span>
