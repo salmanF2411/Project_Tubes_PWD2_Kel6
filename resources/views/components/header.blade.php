@@ -22,6 +22,7 @@
             <!-- Icon Notif-->
             <div class="relative" x-data="{ notifOpen: false }">
                 <button
+                    @click="notifOpen = !notifOpen"
                     class="relative p-2 text-slate-600 hover:bg-slate-100 rounded-lg transition-colors cursor-pointer">
                     <i class="fa-solid fa-bell text-xl"></i>
                     <span class="absolute top-1 right-1 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center font-bold">10</span>
@@ -29,6 +30,10 @@
 
                 <!-- Notif Dropdown -->
                 <div
+                    x-show="notifOpen"
+                    x-cloak
+                    x-transition
+                    @click.outside="notifOpen = false"
                     class="absolute right-0 mt-2 w-80 bg-white rounded-xl shadow-2xl border border-slate-200 z-50 max-h-96 overflow-y-auto">
                     <div class="px-4 py-3 border-b border-slate-100 bg-gradient-to-r from-blue-50 to-blue-100 flex items-center gap-2">
                         <i class="fa-solid fa-bell text-sm"></i>
@@ -42,6 +47,16 @@
                                 <p class="text-sm font-semibold text-slate-800">Stok Produk Terbatas</p>
                                 <p class="text-xs text-slate-600">Minyak goreng premium tinggal 5 unit</p>
                                 <p class="text-xs text-slate-400 mt-1">5 menit yang lalu</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-4 py-3 border-b border-slate-100 hover:bg-slate-100 transition cursor-pointer">
+                        <div class="flex gap-3">
+                            <div class="w-2 h-2 bg-blue-500 rounded-full mt-1.5 flex-shrink-0"></div>
+                            <div class="flex-1">
+                                <p class="text-sm font-semibold text-slate-800">Transaksi Berhasil</p>
+                                <p class="text-xs text-slate-600">Transaksi Rp 150.000 berhasil diproses</p>
+                                <p class="text-xs text-slate-400 mt-1">15 menit yang lalu</p>
                             </div>
                         </div>
                     </div>
