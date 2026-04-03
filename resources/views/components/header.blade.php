@@ -25,7 +25,7 @@
                     @click="notifOpen = !notifOpen"
                     class="relative p-2 text-slate-600 hover:bg-slate-100 rounded-lg transition-colors cursor-pointer">
                     <i class="fa-solid fa-bell text-xl"></i>
-                    <span class="absolute top-1 right-1 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center font-bold">10</span>
+                    <span class="absolute top-1 right-1 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center font-bold">3</span>
                 </button>
 
                 <!-- Notif Dropdown -->
@@ -59,6 +59,20 @@
                                 <p class="text-xs text-slate-400 mt-1">15 menit yang lalu</p>
                             </div>
                         </div>
+                    </div>
+                    <div class="px-4 py-3 border-b border-slate-100 hover:bg-slate-100 transition cursor-pointer">
+                        <div class="flex gap-3">
+                            <div class="w-2 h-2 bg-blue-500 rounded-full mt-1.5 flex-shrink-0"></div>
+                            <div class="flex-1">
+                                <p class="text-sm font-semibold text-slate-800">Transaksi Berhasil</p>
+                                <p class="text-xs text-slate-600">Transaksi Rp 100.000 berhasil diproses</p>
+                                <p class="text-xs text-slate-400 mt-1">20 menit yang lalu</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="px-4 py-2 border-t border-slate-100 bg-slate-50 text-center">
+                        <a href="#" class="text-xs text-blue-600 hover:text-blue-700 font-semibold">Lihat semua notifikasi →</a>
                     </div>
                 </div>
             </div>
