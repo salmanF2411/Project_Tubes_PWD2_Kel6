@@ -30,6 +30,20 @@
                 <span>Laporan</span>
                 <i class="fa-solid fa-chevron-down w-4 ml-auto text-xs transition-transform"></i>
             </button>
+            <ul class="space-y-1 ml-8 mt-1">
+                <li>
+                    <a href="#" class="flex items-center gap-3 px-4 py-2 rounded font-medium transition-all hover:bg-blue-50 text-slate-700 hover:text-blue-600 text-sm">
+                        <i class="fa-solid fa-receipt w-4"></i>
+                        <span>Laporan Transaksi</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex items-center gap-3 px-4 py-2 rounded font-medium transition-all hover:bg-blue-50 text-slate-700 hover:text-blue-600 text-sm">
+                        <i class="fa-solid fa-boxes-stacked w-4"></i>
+                        <span>Laporan Stok</span>
+                    </a>
+                </li>
+            </ul>
         </li>
         <li>
             <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-lg font-medium transition-all hover:bg-blue-50 text-slate-700 hover:text-blue-600">
