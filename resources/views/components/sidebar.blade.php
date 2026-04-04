@@ -1,7 +1,7 @@
 <aside class="w-60 bg-white text-slate-800 min-h-screen p-4 shadow-md border-r border-slate-200">
     <ul class="space-y-1">
         <li>
-            <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-lg font-medium transition-all hover:bg-blue-50 text-slate-700 hover:text-blue-600">
+            <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-lg font-medium bg-blue-100 text-blue-600 transition-all hover:bg-blue-50 text-slate-700 hover:text-blue-600">
                 <i class="fa-solid fa-chart-line w-5"></i>
                 <span>Dashboard</span>
             </a>
@@ -25,12 +25,12 @@
             </a>
         </li>
         <li>
-            <button class="w-full flex items-center gap-3 px-4 py-3 rounded-lg font-medium transition-all hover:bg-blue-50 text-slate-700 hover:text-blue-600 cursor-pointer">
+            <button onclick="toggleReports()" class="w-full flex items-center gap-3 px-4 py-3 rounded-lg font-medium transition-all hover:bg-blue-50 text-slate-700 hover:text-blue-600 cursor-pointer">
                 <i class="fa-solid fa-chart-bar w-5"></i>
                 <span>Laporan</span>
-                <i class="fa-solid fa-chevron-down w-4 ml-auto text-xs transition-transform"></i>
+                <i class="fa-solid fa-chevron-down w-4 ml-auto text-xs transition-transform" id="reportChevron"></i>
             </button>
-            <ul class="space-y-1 ml-8 mt-1">
+            <ul id="reportsMenu" class="hidden space-y-1 ml-8 mt-1">
                 <li>
                     <a href="#" class="flex items-center gap-3 px-4 py-2 rounded font-medium transition-all hover:bg-blue-50 text-slate-700 hover:text-blue-600 text-sm">
                         <i class="fa-solid fa-receipt w-4"></i>
@@ -53,3 +53,13 @@
         </li>
     </ul>
 </aside>
+
+<script>
+    function toggleReports() {
+        const menu = document.getElementById('reportsMenu');
+        const chevron = document.getElementById('reportChevron');
+
+        menu.classList.toggle('hidden');
+        chevron.classList.toggle('rotate-180');
+    }
+</script>
