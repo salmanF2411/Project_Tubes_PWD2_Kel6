@@ -1,13 +1,13 @@
 @extends('layouts.layoutAdminPanel')
 
 @section('content')
-<div class="p-6">
-    <h1 class="text-2xl font-bold mb-4 underline">Dashboard</h1>
-    <p>Selamat datang di dashboard admin panel (Kelompok 6)</p>
-    <ul>
-        <li>Salman Fauzi</li>
-        <li>Dwiky Candra</li>
-        <li>Wahyu</li>
-    </ul>
+<div class="mb-8">
+    <h1 class="text-3xl font-bold text-slate-900">
+        <i class="fa-solid fa-chart-line text-blue-600 mr-2"></i>
+        Dashboard
+    </h1>
+    <p class="text-slate-500 text-sm  mt-1">
+        Ringkasan aktivitas minimarket hari ini
+    </p>
 </div>
 @endsection
