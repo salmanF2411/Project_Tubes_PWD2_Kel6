@@ -32,9 +32,9 @@ $currentRoute = Route::currentRouteName();
             <button onclick="toggleReports()" class="w-full flex items-center gap-3 px-4 py-3 rounded-lg font-medium transition-all hover:bg-blue-50 {{ in_array($currentRoute, ['laporan-transaksi', 'laporan-stok']) ? 'bg-blue-100 text-blue-600' : 'text-slate-700 hover:text-blue-600' }} cursor-pointer">
                 <i class="fa-solid fa-chart-bar w-5"></i>
                 <span>Laporan</span>
-                <i class="fa-solid fa-chevron-down w-4 ml-auto text-xs transition-transform" id="reportChevron"></i>
+                <i class="fa-solid fa-chevron-down w-4 ml-auto text-xs transition-transform {{ in_array($currentRoute, ['laporan-transaksi', 'laporan-stok']) ? 'rotate-180' : '' }}" id="reportChevron"></i>
             </button>
-            <ul id="reportsMenu" class="hidden space-y-1 ml-8 mt-1">
+            <ul id="reportsMenu" class="space-y-1 ml-8 mt-1 {{ in_array($currentRoute, ['laporan-transaksi', 'laporan-stok']) ? '' : 'hidden' }}">
                 <li>
                     <a href="{{ route('laporan-transaksi') }}" class="flex items-center gap-3 px-4 py-2 rounded font-medium transition-all hover:bg-blue-50 {{ $currentRoute === 'laporan-transaksi' ? 'bg-blue-100 text-blue-600' : 'text-slate-700 hover:text-blue-600' }} text-sm">
                         <i class="fa-solid fa-receipt w-4"></i>
