@@ -7,7 +7,25 @@
     </h1>
     <p class="text-slate-500 text-sm mt-1">Manajemen pengguna sistem mini market</p>
 </div>
-    <div class="bg-white rounded-lg border border-slate-200 overflow-hidden">
+<!-- Data User -->
+<div class="mb-6 flex items-center justify-between gap-4">
+    <div class="flex-1 max-w-md">
+        <input type="text" placeholder="Cari user..." class="w-full px-4 py-2 border border-slate-200 rounded-lg focus:outline-none focus:border-blue-400">
+    </div>
+    <div class="flex gap-2">
+        <select class="px-4 py-2 border border-slate-200 rounded-lg focus:outline-none focus:border-blue-400">
+            <option>Semua Role</option>
+            <option>Admin</option>
+            <option>Manager</option>
+            <option>Kasir</option>
+            <option>Gudang</option>
+        </select>
+        <x-button href="#" type="primary" icon="fa-solid fa-plus">
+            Tambah User
+        </x-button>
+    </div>
+</div>
+<div class="bg-white rounded-lg border border-slate-200 overflow-hidden">
     <div class="px-6 py-4 border-b border-slate-200 bg-slate-50">
         <h2 class="font-bold text-slate-900">Daftar User</h2>
     </div>
