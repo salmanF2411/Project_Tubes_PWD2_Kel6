@@ -136,7 +136,7 @@
         </div>
 
         <div class="px-6 py-3 border-t border-slate-200 text-center">
-            <a href="#" class="text-sm text-blue-600 hover:text-blue-700">Lihat semua →</a>
+            <a href="{{ route('laporan-transaksi') }}" class="text-sm text-blue-600 hover:text-blue-700">Lihat semua →</a>
         </div>
     </div>
 
@@ -204,7 +204,7 @@
         </div>
 
         <div class="px-6 py-3 border-t border-slate-200 text-center">
-            <a href="#" class="text-sm text-blue-600 hover:text-blue-700">Lihat semua →</a>
+            <a href="{{ route('laporan-stok') }}" class="text-sm text-blue-600 hover:text-blue-700">Lihat semua →</a>
         </div>
     </div>
 </div>
