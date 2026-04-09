@@ -25,7 +25,7 @@
                     @click="notifOpen = !notifOpen"
                     class="relative p-2 text-slate-600 hover:bg-slate-100 rounded-lg transition-colors cursor-pointer">
                     <i class="fa-solid fa-bell text-xl"></i>
-                    <span class="absolute top-1 right-1 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center font-bold">3</span>
+                    <span class="absolute top-1 right-1 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center font-bold">{{ $notifCount }}</span>
                 </button>
 
                 <!-- Notif Dropdown -->
@@ -78,7 +78,7 @@
             </div>
 
             <div class="hidden md:flex flex-col items-end">
-                <span class="text-sm font-medium">Pak Jayusman</span>
+                <span class="text-sm font-medium">{{ $user }}</span>
                 <span class="text-xs text-slate-500 font-bold">Selamat datang 👋</span>
             </div>
 
