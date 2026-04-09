@@ -8,6 +8,15 @@
     <p class="text-slate-500 text-sm mt-1">Kelola semua produk mini market</p>
 </div>
 
+<div class="mb-6 flex items-center justify-between">
+    <div class="flex-1 max-w-md">
+        <input type="text" placeholder="Cari produk..." class="w-full px-4 py-2 border border-slate-200 rounded-lg focus:outline-none focus:border-blue-400">
+    </div>
+    <x-button href="#" type="primary" icon="fa-solid fa-plus">
+        Tambah Produk
+    </x-button>
+</div>
+
 <!-- Daftar Produk -->
 <div class="bg-white rounded-lg border border-slate-200 overflow-hidden">
     <div class="px-6 py-4 border-b border-slate-200 bg-slate-50">
@@ -29,7 +38,6 @@
             </thead>
 
             <tbody>
-
                 <!-- Produk 1 -->
                 <tr class="border-b border-slate-100 hover:bg-blue-50 transition-colors">
                     <td class="px-6 py-4 font-medium text-slate-900">PRD-001</td>
