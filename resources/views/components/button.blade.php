@@ -4,7 +4,7 @@
 
 <a href="{{ $href }}"
     {{ $attributes->merge([
-       'class' => "px-4 py-2 rounded-lg transition flex items-center gap-2 text-sm font-medium " . $getStyle()
+       'class' => "px-4 py-2 rounded-lg transition items-center gap-2 text-sm font-medium " . $getStyle()
    ]) }}>
 
     @if($icon)
