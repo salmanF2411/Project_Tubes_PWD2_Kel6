@@ -161,15 +161,15 @@
                 <tbody>
                     <tr class="border-b border-slate-100">
                         <td class="px-6 py-3 font-medium text-slate-900">Minyak Goreng</td>
-                        <td class="px-6 py-3 text-slate-700">15</td>
+                        <td class="px-6 py-3 text-slate-700">0</td>
                         <td class="px-6 py-3 text-slate-600">50</td>
                         <td class="px-6 py-3">
-                            <x-badge type="success">Rendah</x-badge>
+                            <x-badge type="danger">Habis</x-badge>
                         </td>
                     </tr>
                     <tr class="border-b border-slate-100">
                         <td class="px-6 py-3 font-medium text-slate-900">Gula Pasir 1kg</td>
-                        <td class="px-6 py-3 text-slate-700">8</td>
+                        <td class="px-6 py-3 text-slate-700">10</td>
                         <td class="px-6 py-3 text-slate-600">30</td>
                         <td class="px-6 py-3">
                             <x-badge type="warning">Rendah</x-badge>
@@ -177,10 +177,10 @@
                     </tr>
                     <tr class="border-b border-slate-100">
                         <td class="px-6 py-3 font-medium text-slate-900">Beras Putih 5kg</td>
-                        <td class="px-6 py-3 text-slate-700">5</td>
+                        <td class="px-6 py-3 text-slate-700">0</td>
                         <td class="px-6 py-3 text-slate-600">20</td>
                         <td class="px-6 py-3">
-                            <x-badge type="danger">Kritis</x-badge>
+                            <x-badge type="danger">Habis</x-badge>
                         </td>
                     </tr>
                     <tr class="border-b border-slate-100">
@@ -193,10 +193,10 @@
                     </tr>
                     <tr>
                         <td class="px-6 py-3 font-medium text-slate-900">Roti Tawar</td>
-                        <td class="px-6 py-3 text-slate-700">3</td>
-                        <td class="px-6 py-3 text-slate-600">25</td>
+                        <td class="px-6 py-3 text-slate-700">20</td>
+                        <td class="px-6 py-3 text-slate-600">20</td>
                         <td class="px-6 py-3">
-                            <x-badge type="danger">Kritis</x-badge>
+                            <x-badge type="success">Banyak</x-badge>
                         </td>
                     </tr>
                 </tbody>

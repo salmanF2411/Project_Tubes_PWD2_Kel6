@@ -181,7 +181,7 @@
             <div class="space-y-3 pt-4 border-t border-slate-200">
                 <div class="flex justify-between text-sm text-slate-700">
                     <span>Subtotal:</span>
-                    <span>Rp 0</span>
+                    <span>Rp 25.000</span>
                 </div>
                 <div class="flex justify-between text-sm text-slate-700">
                     <span>Diskon:</span>
@@ -189,7 +189,7 @@
                 </div>
                 <div class="flex justify-between font-bold text-lg text-slate-900 pt-2">
                     <span>Total:</span>
-                    <span>Rp 0</span>
+                    <span>Rp 25.000</span>
                 </div>
             </div>
         </div>
