@@ -144,5 +144,81 @@
             </div>
         </div>
     </div>
+
+    <!-- Keranjang dan Pembayaran -->
+    <div class="lg:sticky lg:top-8 lg:h-fit space-y-4">
+        <div class="bg-white rounded-lg border border-slate-200 p-6">
+            <h3 class="font-bold text-slate-900 text-lg mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-shopping-cart text-blue-600"></i>Keranjang (1)
+            </h3>
+
+            <!-- Tampilan kalo keranjang kosong -->
+            <!-- <div class="text-center py-12 text-slate-500">
+                <i class="fa-solid fa-cart-shopping text-4xl mb-4 opacity-50"></i>
+                <p class="text-sm">Belum ada item di keranjang</p>
+                <p class="text-xs mt-1">Tambahkan produk dari daftar di atas</p>
+            </div> -->
+
+            <!-- Tampilan kalo ada produk di keranjang -->
+            <div class="space-y-3 mb-6">
+                <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-lg">
+                    <div class="w-12 h-12 rounded-lg overflow-hidden bg-slate-100">
+                        <img src="{{ asset('img/gula.jpg') }}" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-1">
+                        <p class="font-medium text-slate-900 text-sm">Gula Pasir 1kg</p>
+                        <p class="text-xs text-slate-500">Rp 12.500 x 2</p>
+                    </div>
+                    <div class="text-right">
+                        <p class="font-medium text-slate-900">Rp 25.000</p>
+                        <button class="text-red-500 hover:text-red-600 text-xs mt-1">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-3 pt-4 border-t border-slate-200">
+                <div class="flex justify-between text-sm text-slate-700">
+                    <span>Subtotal:</span>
+                    <span>Rp 0</span>
+                </div>
+                <div class="flex justify-between text-sm text-slate-700">
+                    <span>Diskon:</span>
+                    <span>- Rp 0</span>
+                </div>
+                <div class="flex justify-between font-bold text-lg text-slate-900 pt-2">
+                    <span>Total:</span>
+                    <span>Rp 0</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pembayaran -->
+        <div class="bg-gradient-to-r from-green-50 to-emerald-50 rounded-lg border border-green-200 p-6">
+            <h4 class="font-bold text-green-800 mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-credit-card text-green-600"></i>Pembayaran
+            </h4>
+            <div class="space-y-3">
+                <div>
+                    <label class="block text-xs font-medium text-slate-700 mb-1">Bayar</label>
+                    <input type="number" placeholder="0" class="w-full px-3 py-2 border border-slate-200 rounded-lg focus:outline-none focus:border-green-400 focus:ring-1 focus:ring-green-200 text-sm">
+                </div>
+                <div class="grid grid-cols-2 gap-2 text-xs">
+                    <button class="px-3 py-2 bg-slate-100 hover:bg-slate-200 rounded-lg transition font-medium">Non-Tunai</button>
+                    <button class="px-3 py-2 bg-emerald-100 hover:bg-emerald-200 rounded-lg transition font-medium">Tunai</button>
+                </div>
+                <div class="text-right pt-2 border-t border-green-200">
+                    <span class="text-sm text-slate-600">Kembali: </span>
+                    <span class="font-bold text-lg text-green-600">Rp 0</span>
+                </div>
+            </div>
+
+            <button class="w-full mt-6 px-4 py-3 bg-green-600 text-white rounded-lg font-bold text-sm hover:bg-green-700 transition flex items-center justify-center gap-2 shadow-lg">
+                <i class="fa-solid fa-check"></i>
+                Selesaikan Transaksi
+            </button>
+        </div>
+    </div>
 </div>
 @endsection
