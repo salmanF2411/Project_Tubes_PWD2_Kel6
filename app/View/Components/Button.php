@@ -21,6 +21,7 @@ class Button extends Component
         return [
             'primary' => 'bg-blue-600 text-white hover:bg-blue-700',
             'danger'  => 'bg-red-600 text-white hover:bg-red-700',
+            'secondary' => 'bg-green-600 text-white hover:bg-gray-700',
         ][$this->type] ?? 'bg-blue-600 text-white hover:bg-blue-700';
     }
 
