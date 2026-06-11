@@ -1,35 +1,55 @@
 <?php
 
+use App\Http\Controllers\Auth\LoginController;
 use Illuminate\Support\Facades\Route;
 
-// Route::get('/', function () {
-//     return view('layouts.layoutAdminPanel');
-// });
+// ============================================
+// PUBLIC ROUTES - LOGIN
+// ============================================
+Route::middleware('guest')->group(function () {
+    Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
+    Route::post('/login', [LoginController::class, 'login']);
+});
 
-Route::get('/', function () {
-    return view('pages.dashboard');
-})->name('dashboard');
+// ============================================
+// PROTECTED ROUTES - REQUIRE AUTHENTICATION
+// ============================================
+Route::middleware('auth')->group(function () {
+    // Dashboard
+    Route::get('/', function () {
+        return view('pages.dashboard');
+    })->name('dashboard');
 
-Route::get('/produk', function () {
-    return view('pages.produk');
-})->name('produk');
+    // Logout
+    Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
-Route::get('/stok', function () {
-    return view('pages.stok');
-})->name('stok');
+    // Products
+    Route::get('/produk', function () {
+        return view('pages.produk');
+    })->name('produk');
 
-Route::get('/transaksi', function () {
-    return view('pages.transaksi');
-})->name('transaksi');
+    // Stock/Inventory
+    Route::get('/stok', function () {
+        return view('pages.stok');
+    })->name('stok');
 
-Route::get('/laporan-stok', function () {
-    return view('pages.laporan-stok');
-})->name('laporan-stok');
+    // Transactions
+    Route::get('/transaksi', function () {
+        return view('pages.transaksi');
+    })->name('transaksi');
 
-Route::get('/laporan-transaksi', function () {
-    return view('pages.laporan-transaksi');
-})->name('laporan-transaksi');
+    // Stock Reports
+    Route::get('/laporan-stok', function () {
+        return view('pages.laporan-stok');
+    })->name('laporan-stok');
 
-Route::get('/kelola-user', function () {
-    return view('pages.kelola-user');
-})->name('kelola-user');
+    // Transaction Reports
+    Route::get('/laporan-transaksi', function () {
+        return view('pages.laporan-transaksi');
+    })->name('laporan-transaksi');
+
+    // User Management - Only for Owner and Store Manager
+    Route::get('/kelola-user', function () {
+        return view('pages.kelola-user');
+    })->name('kelola-user')->middleware('can:view users');
+});

@@ -1,6 +1,16 @@
 @extends('layouts.layoutAdminPanel')
 
 @section('content')
+<!-- Success Message -->
+@if(session('success'))
+<div class="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg flex items-center gap-3">
+    <i class="fa-solid fa-check-circle text-green-600 text-lg"></i>
+    <div>
+        <p class="text-green-800 font-semibold">{{ session('success') }}</p>
+    </div>
+</div>
+@endif
+
 <div class="mb-8">
     <h1 class="text-3xl font-bold text-slate-900">
         <i class="fa-solid fa-chart-line text-blue-600 mr-2"></i>
